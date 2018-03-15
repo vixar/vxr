@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Graficas1Component implements OnInit {
 
+
     // Doughnut
 
   graficos: any = {
@@ -19,13 +20,17 @@ export class Graficas1Component implements OnInit {
     'grafico2': {
       'labels': ['Hombres', 'Mujeres'],
       'data':  [4500, 6000],
-      'type': 'doughnut',
+      'type': 'pie',
       'leyenda': 'Entrevistados'
     },
     'grafico3': {
       'labels': ['Si', 'No'],
       'data':  [95, 5],
-      'type': 'doughnut',
+      'type': 'bar',
+      'options': {
+        scaleShowVerticalLines: false,
+        responsive: true
+      },
       'leyenda': '¿Le dan gases los frijoles?'
     },
     'grafico4': {

@@ -15,9 +15,8 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">{{graficos.grafico2.leyenda}}</h4>
-                <app-grafico-dona [ChartLabels]="graficos.grafico2.labels" [ChartData]="graficos.grafico2.data" [ChartType]="graficos.grafico2.type">
-                </app-grafico-dona>
-
+                <app-grafico-pie [pieChartLabels]="graficos.grafico2.labels" [pieChartData]="graficos.grafico2.data" [pieChartType]="graficos.grafico2.type">
+                </app-grafico-pie>
             </div>
         </div>
     </div>
@@ -30,7 +29,6 @@
                 <h4 class="card-title">{{graficos.grafico3.leyenda}}</h4>
                 <app-grafico-dona [ChartLabels]="graficos.grafico3.labels" [ChartData]="graficos.grafico3.data" [ChartType]="graficos.grafico3.type">
                 </app-grafico-dona>
-
             </div>
         </div>
     </div>
