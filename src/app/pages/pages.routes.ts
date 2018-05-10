@@ -1,3 +1,4 @@
+
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -7,6 +8,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { LoginGuardGuard } from '../services/services.index';
 
 
 
@@ -16,6 +18,7 @@ const pagesRoutes: Routes = [
         path: '',
         // el cual tiene HIJOS que son:
         component: PagesComponent,
+        canActivate: [ LoginGuardGuard ],
         children: [
             // estos:
             {path: 'dashboard', component: DashboardComponent, data: {Titulo: 'Dashboard'} },
