@@ -1,3 +1,4 @@
+import { PerfilComponent } from './perfil/perfil.component';
 
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,7 +10,6 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { LoginGuardGuard } from '../services/services.index';
-
 
 
 const pagesRoutes: Routes = [
@@ -27,6 +27,7 @@ const pagesRoutes: Routes = [
             {path: 'promesas', component: PromesasComponent, data: {Titulo: 'Promise'}},
             {path: 'rxjs', component: RxjsComponent, data: {Titulo: 'RxJs'}},
             {path: 'account-settings', component: AccountSettingsComponent, data: {Titulo: 'Settings'}},
+            {path: 'perfil', component: PerfilComponent, data: {Titulo: 'Perfil'}},
             // si el path llega vacio, redirecciona al dashboard
             {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
 

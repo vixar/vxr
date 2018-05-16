@@ -3,10 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { RouterModule } from '@angular/router';
 
+// Pipe Module
+
+
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 
@@ -14,6 +18,7 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     imports: [
         RouterModule,
         CommonModule,
+        PipesModule
     ],
     declarations: [
         PagenotfoundComponent,
