@@ -5,7 +5,7 @@ export class SidebarService {
 
   menu: any = [
     {
-      Titulo: 'Principal',
+      Titulo: 'Inicio',
       Icono: 'mdi mdi-gauge',
       Submenu: [
         { Titulo: 'Dashboard', url: '/dashboard' },
@@ -13,6 +13,15 @@ export class SidebarService {
         { Titulo: 'Gráficas', url: '/graficas1' },
         { Titulo: 'promesas', url: '/promesas' },
         { Titulo: 'rxjs', url: '/rxjs' },
+      ]
+    },
+    {
+      Titulo: 'Administración',
+      Icono: 'mdi mdi-folder-lock-open',
+      Submenu: [
+        { Titulo: 'Usuarios', url: '/usuarios' },
+        { Titulo: 'Hospitales', url: '/hospitales' },
+        { Titulo: 'Médicos', url: '/medicos' }
       ]
     }
   ];

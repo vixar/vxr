@@ -10,6 +10,7 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { LoginGuardGuard } from '../services/services.index';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 const pagesRoutes: Routes = [
@@ -21,6 +22,7 @@ const pagesRoutes: Routes = [
         canActivate: [ LoginGuardGuard ],
         children: [
             // estos:
+            // Inicio
             {path: 'dashboard', component: DashboardComponent, data: {Titulo: 'Dashboard'} },
             {path: 'progress', component: ProgressComponent, data: {Titulo: 'Progress'}},
             {path: 'graficas1', component: Graficas1Component, data: {Titulo: 'Statistics'}},
@@ -28,6 +30,9 @@ const pagesRoutes: Routes = [
             {path: 'rxjs', component: RxjsComponent, data: {Titulo: 'RxJs'}},
             {path: 'account-settings', component: AccountSettingsComponent, data: {Titulo: 'Settings'}},
             {path: 'perfil', component: PerfilComponent, data: {Titulo: 'Perfil'}},
+
+            // Administración
+            {path: 'usuarios', component: UsuariosComponent, data: {Titulo: 'Mantenimiento de Usuarios'}},
             // si el path llega vacio, redirecciona al dashboard
             {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
 

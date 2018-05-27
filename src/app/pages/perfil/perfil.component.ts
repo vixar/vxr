@@ -36,6 +36,7 @@ export class PerfilComponent implements OnInit {
   }
 
   seleccionarImagen( archivo: File ) {
+    // COFIRMACIÓN DE IMAGEN
     if (!archivo ) {
       this.imagenSubir = null;
       return;
@@ -47,14 +48,17 @@ export class PerfilComponent implements OnInit {
       return;
     }
 
+    // PROCESAR LA IMAGEN
+
     this.imagenSubir = archivo;
 
     let reader = new FileReader();
 
-    let urlImagenTemp = reader.readAsDataURL(archivo);
+    reader.readAsDataURL(archivo);
+    // let urlImagenTemp = reader.readAsDataURL(archivo);
 
     reader.onloadend = () => {
-       console.log(reader.result);
+      //  console.log(reader.result);
       this.imagenTemp = reader.result;
     } ;
 
